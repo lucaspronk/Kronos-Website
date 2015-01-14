@@ -10,6 +10,7 @@ gem 'haml', '~> 3.1'
 gem 'jquery-rails', '~> 2.1.0'
 gem 'selectize-rails', '~> 0.8.1'
 gem 'nested_form', '~> 0.3.2'
+gem 'faker'
 
 # Gems used only for assets and not required
 # in production environments by default.
