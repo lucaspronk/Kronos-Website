@@ -2,7 +2,7 @@
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
-*/
+ */
 
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css";
@@ -17,9 +17,26 @@ body{
   background-color: #F5F5F5;
 }
 
+footer.app{
+  padding-top: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+}
+
+footer.app .container{
+  background-color:#369866;
+  height: 120px;
+  color: #fff;
+}
+
+footer.app .container a{
+  color: #fff;
+}
+
 .navbar-custom {
   color:#ffffff;
-
 }
 
 .navbar-default .container{
@@ -41,10 +58,7 @@ body{
   padding-top:0px;
 }
 
-.footer .container{
-  background-color:#369866;
-  height: 120px;
-}
+
 h1{
   color:#369866;
   font-family: 'Droid Serif', serif;
