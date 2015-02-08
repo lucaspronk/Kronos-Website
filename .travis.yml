@@ -1,0 +1,11 @@
+language: ruby
+bundler_args: --without development production assets
+rvm:
+  - 1.9.3
+script:
+  - bundle exec rspec spec/
+# before_script:
+#   - cp config/database.yml.example config/database.yml
+#   - psql -c 'create database kronos_test;' -U postgres
+#   - RAILS_ENV=test bundle exec rake db:schema:load
+#   - bundle exec rake db:test:prepare
