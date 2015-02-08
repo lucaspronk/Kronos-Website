@@ -12,6 +12,14 @@ gem 'selectize-rails', '~> 0.8.1'
 gem 'nested_form', '~> 0.3.2'
 gem 'faker'
 
+gem :development do
+  gem 'guard-rspec', '~> 2.5.4'
+end
+
+group :test, :development do
+  gem 'rspec-rails', '~> 2.11.0'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
