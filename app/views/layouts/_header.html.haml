@@ -1,13 +1,15 @@
-.container.logo-top.text-center= image_tag "/images/logo.png", :alt => "Brand"
-%nav.navbar.navbar-default.navbar-static-top{"role" => "navigation"}
-  .container
-    #navbar.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li= link_to "Home", "/"
-        %li= link_to "Informatie", "/informatie"
-        %li= link_to "Agenda", "/agenda"
-        %li= link_to "Uitslagen", "/uitslagen"
-        %li= link_to "Kronometer", "/kronometer"
-        %li= link_to "Chatbox", "/chatbox"
-      %ul.nav.navbar-nav.navbar-right
-        %li= link_to "Login", "/login"
+%header 
+  .container.logo-top.text-center= image_tag "/assets/logo.png", :alt => "Brand"
+
+  %nav.navbar.navbar-default.navbar-static-top{"role" => "navigation"}
+    .container
+      #navbar.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li= link_to "Home", "/"
+          %li= link_to "Informatie", "/informatie"
+          %li= link_to "Agenda", "/agenda"
+          %li= link_to "Uitslagen", "/uitslagen"
+          %li= link_to "Kronometer", "/kronometer"
+          %li= link_to "Chatbox", "/chatbox"
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Login", "/login"

@@ -3,21 +3,20 @@
     %h1 Nieuws
 .row
   .col-md-8
-    .row
-      .col-md-offset-3.col-md-9
-        %h2= Faker::Lorem.sentence
-        %p
-          %small.text-muted= Faker::Time.backward(14).strftime('%d %B %Y %H:%M')
-    .row
-      .col-md-3.text-right= image_tag 'http://lorempixel.com/150/150/?1', class: "img-responsive img-thumbnail"
-      .col-md-9
-        %p.text-justify= Faker::Lorem.paragraph(20)
-    .row
-      .col-md-offset-3.col-md-9
-        %h2= Faker::Lorem.sentence
-        %p
-          %small.text-muted= Faker::Time.backward(14).strftime('%d %B %Y %H:%M')
-    .row
-      .col-md-3.text-right= image_tag 'http://lorempixel.com/150/150/?2', class: "img-responsive img-thumbnail"
-      .col-md-9
-        %p.text-justify= Faker::Lorem.paragraph(20)
+    = 5.times do |ntime|
+      .row
+        .col-md-offset-3.col-md-9
+          %h2= Faker::Lorem.sentence
+          %p
+            %small.text-muted= Faker::Time.backward(14).strftime('%d %B %Y %H:%M')
+      .row
+        .col-md-3.text-right= image_tag 'http://lorempixel.com/150/150/?1', class: "img-responsive img-thumbnail"
+        .col-md-9
+          %p.text-justify= Faker::Lorem.paragraph(20)
+  .col-md-4
+    .panel.panel-default
+      .panel-heading Agenda
+      %ul.list-group
+        =10.times do |ntime|
+          -# TODO: add date and add limit to sentence sise
+          %li.list-group-item= Faker::Lorem.sentence
