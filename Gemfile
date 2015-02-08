@@ -12,7 +12,7 @@ gem 'selectize-rails', '~> 0.8.1'
 gem 'nested_form', '~> 0.3.2'
 gem 'faker'
 
-gem :development do
+group :development do
   gem 'guard-rspec', '~> 2.5.4'
 end
 
