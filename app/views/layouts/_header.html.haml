@@ -1,15 +1,21 @@
-%header 
-  .container.logo-top.text-center= image_tag "/assets/logo.png", :alt => "Brand"
+%header.app
+  .container
+    .logo-top.visible-lg-block
+    .logo-top.visible-md-block
+    .logo-top.visible-sm-block
 
-  %nav.navbar.navbar-default.navbar-static-top{"role" => "navigation"}
+  %nav.navbar.navbar-default.navbar-static-top{'role'=>'navigation'}
     .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand.visible-xs-block{:href => '/'} Kronos
       #navbar.collapse.navbar-collapse
         %ul.nav.navbar-nav
-          %li= link_to "Home", "/"
-          %li= link_to "Informatie", "/informatie"
-          %li= link_to "Agenda", "/agenda"
-          %li= link_to "Uitslagen", "/uitslagen"
-          %li= link_to "Kronometer", "/kronometer"
-          %li= link_to "Chatbox", "/chatbox"
-        %ul.nav.navbar-nav.navbar-right
-          %li= link_to "Login", "/login"
+          %li= link_to 'Home', '/'
+          %li= link_to 'Agenda', '/agenda'
+          %li= link_to 'Agendaitem', '/agendaitem'
+          %li= link_to 'Uitslagen', '/uitslagen'

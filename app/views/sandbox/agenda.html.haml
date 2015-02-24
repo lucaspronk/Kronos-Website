@@ -1,0 +1,54 @@
+.row 
+  .col-md-12
+    %h1 Agenda <small>april 2015</small>
+.row
+  .col-md-12
+    %ul.nav.nav-tabs
+      %li.dropdown{:role => "presentation"}
+        %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"} 
+          jaar
+          %span.caret
+        %ul.dropdown-menu{:role => "menu"}
+          %li= link_to '2015','#'
+          %li= link_to '2014','#'
+          %li= link_to '2013','#'
+          %li= link_to '2012','#'
+      %li.dropdown{:role => "presentation"}
+        %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"} 
+          eerder
+          %span.caret
+        %ul.dropdown-menu{:role => "menu"}
+          %li= link_to 'januari','okt'
+      %li{:role => 'presentation'}= link_to 'februari','#'
+      %li{:role => 'presentation'}= link_to 'maart','#'
+      %li.active{:role => 'presentation'}= link_to 'april','#'
+      %li{:role => 'presentation'}= link_to 'mei','#'
+      %li{:role => 'presentation'}= link_to 'juni','#'
+      %li.dropdown{:role => "presentation"}
+        %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"} 
+          later
+          %span.caret
+        %ul.dropdown-menu{:role => "menu"}
+          %li= link_to 'juli','#'
+          %li= link_to 'augustus','#'
+          %li= link_to 'september','#'
+          %li= link_to 'november','#'
+          %li= link_to 'december','#'
+.row 
+  &nbsp;
+%table.table.table-hover
+  %tbody
+    - 15.times do |ntime|
+      %tr
+        %td.col-xs-1
+          %h4
+            = Faker::Date.forward(23).strftime('%d') 
+            =content_tag(:small, Faker::Date.forward(23).strftime('%a'))
+        %td.col-xs-1
+          %h4 
+            %small= Faker::Time.backward(14).strftime('%H:%M')
+        %td.col-xs-10
+          %h4
+            %a{:href => "#"}
+              = Faker::Lorem.sentence 
+              = content_tag :small, (Faker::Lorem.word << " activiteit")

@@ -1,0 +1,146 @@
+.row
+  .col-md12
+    %h1
+      =Faker::Lorem.sentence 
+      %small 
+        =Faker::Lorem.word << 'activiteit'
+.row
+  .col-md-8
+    .row
+      .col-xs-1.text-right
+        %span.glyphicon.glyphicon-time
+      .col-xs-11
+        %p
+          = Faker::Date.backward(14)
+          %br 17:20
+    .row
+      .col-xs-1.text-right
+        %span.glyphicon.glyphicon-map-marker
+      .col-xs-11
+        %p Münster, NRW, Deutschland
+    .row
+      .col-xs-1.text-right
+        %span.glyphicon.glyphicon-globe
+      .col-xs-11
+        %p
+          %a{:href => "http://www.muenster.de/stadt/weihnachtsmarkt/"} http://www.muenster.de/stadt/weihnacht...
+    .row
+      .col-xs-1.text-right
+        %span.glyphicon.glyphicon-book
+      .col-xs-11
+        %p
+          %a{:href => "/commissions/10"} Condico
+    .row
+      .col-xs-1.text-right
+        %span.glyphicon.glyphicon-align-left
+      .col-xs-11
+        - Faker::Lorem.paragraphs.each do |par|
+          %p.text-justify 
+            = par
+  .col-md-4
+    .panel.panel-default
+      .panel-heading Programma
+      .panel-body
+        %p.text-info Geen programma
+      %table.table
+        %tbody
+    .panel.panel-info
+      .panel-heading Inschrijflijst
+      .panel-body Je moet inloggen om inschrijvingen te zien of aan te vullen.
+.row
+  .col-md-12
+    %h2 Uitslagen
+.row
+  .col-md-12
+    %h3 Top 3 per onderdeel
+.row
+  .col-sm-6.col-md-4
+    .panel.panel-default
+      .panel-body
+        %h4
+          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} Verspringen
+      %table.table
+        %tr
+          %td 1
+          %td= Faker::Name.name
+          %td 10:15
+        %tr
+          %td 2
+          %td= Faker::Name.name
+          %td 11:30
+        %tr
+          %td 3
+          %td= Faker::Name.name
+          %td 12:00
+  .col-sm-6.col-md-4
+    .panel.panel-default
+      .panel-body
+        %h4
+          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} Kogelstoten
+      %table.table
+        %tr
+          %td 1
+          %td= Faker::Name.name
+          %td 10:15
+        %tr
+          %td 2
+          %td= Faker::Name.name
+          %td 11:30
+        %tr
+          %td 3
+          %td= Faker::Name.name
+          %td 12:00
+  .col-sm-6.col-md-4
+    .panel.panel-default
+      .panel-body
+        %h4
+          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} 100 meter
+      %table.table
+        %tr
+          %td 1
+          %td= Faker::Name.name
+          %td 10:15
+        %tr
+          %td 2
+          %td= Faker::Name.name
+          %td 11:30
+        %tr
+          %td 3
+          %td= Faker::Name.name
+          %td 12:00
+  .col-sm-6.col-md-4
+    .panel.panel-default
+      .panel-body
+        %h4
+          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} 1500 meter
+      %table.table
+        %tr
+          %td 1
+          %td= Faker::Name.name
+          %td 10:15
+        %tr
+          %td 2
+          %td= Faker::Name.name
+          %td 11:30
+        %tr
+          %td 3
+          %td= Faker::Name.name
+          %td 12:00
+  .col-sm-6.col-md-4
+    .panel.panel-default
+      .panel-body
+        %h4
+          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} 8k Cross
+      %table.table
+        %tr
+          %td 1
+          %td= Faker::Name.name
+          %td 10:15
+        %tr
+          %td 2
+          %td= Faker::Name.name
+          %td 11:30
+        %tr
+          %td 3
+          %td= Faker::Name.name
+          %td 12:00

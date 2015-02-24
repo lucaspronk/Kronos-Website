@@ -1,33 +1,62 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- */
+ * This is a manifest file that'll automatically include all the stylesheets
+ * available in this directory and any sub-directories. You're free to add
+ * application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style
+ * scope.
+ *
+ *= require bootstrap-image-gallery
+ *= require jquery.fileupload-ui
+ *= require markdowncss
+ *= require selectize
+ *= require selectize.default
+ *= require_self
+ *= require_tree .
+*/
 
-@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css";
-@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css";
+// Imports
+// @import "variables";
+@import "bootstrap-custom-variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-/**** ALGEMEEN ****/
+h1 {
+  // cannot change this trough variables in bootstrap-custom-variables so do it
+  // here
+  color: $brand-primary;
+}
+
+/* Sticky Footer 
+ * see example used:
+ * http://getbootstrap.com/examples/sticky-footer-navbar/ 
+ * */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body{
-  margin:0;
-  padding:0;
   margin-bottom: 120px;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  background-color: #F5F5F5;
+}
+
+/* added bottom padding of all immidiate container childs of body */
+
+body > .container {
+  padding-bottom: 120px;
 }
 
 footer.app{
-  padding-top: 50px;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 120px;
+  margin: 0;
+  padding: 0;
 }
 
 footer.app .container{
-  background-color:#369866;
-  height: 120px;
+  background-color:$brand-primary;
+  height:120px;
   color: #fff;
 }
 
@@ -35,59 +64,87 @@ footer.app .container a{
   color: #fff;
 }
 
-.navbar-custom {
-  color:#ffffff;
+// end sticky footer
+
+// header 
+
+header.app{
+  margin: 0;
+  padding: 0;
+}
+header.app .container{
+  background-color:$brand-primary;
+}
+header.app .logo-top{
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
 }
 
-.navbar-default .container{
-  background-color:#369866;
+header.app .logo-top.visible-lg-block{
+  background-image:url(/assets/logo-lg.png);
+  height: 150px;
 }
 
-.navbar-default .navbar-nav > li > a {
-  color:#fff;
-}
-.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-  color: #ffffff;
-}
-.navbar-custom .navbar-brand {
-  color:#eeeeee;
+header.app .logo-top.visible-md-block{
+  background-image:url(/assets/logo-md.png);
+  height: 90px;
 }
 
-.logo-top{
-  background-color:#369866;
-  padding-top:0px;
+header.app .logo-top.visible-sm-block{
+  background-image:url(/assets/logo-md.png);
+  height: 80px;
+}
+
+header.app .navbar-default .container{
+  background-color:$brand-primary;
 }
 
 
-h1{
-  color:#369866;
-  font-family: 'Droid Serif', serif;
+// Banner 
+
+#banner{
+  background: #fff url(/assets/banner/banner.png) no-repeat right top;
 }
 
-h2{
-  font-family: 'Droid Serif', serif;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-.footer {
-  padding-top: 50px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 120px;
+#banner p>span{
+  background-color: rgba(10,10,10,0.4);
   color: #fff;
+  padding: 7px;
+}
+#banner h1 span {
+  background-color: rgba(10,10,10,0.4);
+  color: #fff;
+  padding: 10px;
+}
+#banner form{
+  display: inline;
 }
 
-.footer a {
-  color: #fff;
+#banner form div{
+display: inline;
 }
 
-.panel-default > .panel-heading {
-  background-image: none;
-  background-color:#369866;
-  color: #fff;
+#banner .hide-banner{
+  text-align: right;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  text-decoration: none;
 }
+
+#banner .hide-banner:hover {
+  color: #841b2d;
+  text-decoration: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  cursor: pointer;
+}
+
+
+

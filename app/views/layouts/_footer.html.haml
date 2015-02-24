@@ -1,12 +1,15 @@
 %footer.app
-  .container 
+  .container
     .row
-      .col-lg-8.sponsors
-        -# TODO: add high quality sponsor images
-        -# = link_to image_tag("/assets/sponsors/sponsor-rc.png"), "http://www.runenschede.nl/"
-        -# = link_to image_tag("/assets/sponsors/sponsor-sr.png"), "http://sportraadut.nl"
-      .col-lg-4.adresgegevens
-        %p 
+      .col-xs-8.sponsors
+        %p &nbsp; 
+        .row 
+          .col-xs-3
+            = link_to image_tag('sponsors/sponsor-rc.png', height: '50px'), 'http://www.runenschede.nl/' 
+          .col-xs-3
+            = link_to image_tag('sponsors/sponsor-sk.png', height: '50px'), 'http://www.sportkoepelut.nl/' 
+      .col-xs-4.adresgegevens
+        %p
           %address
             %b Drienerlose Atletiek Vereniging Kronos<br />
             Postbus 217<br />

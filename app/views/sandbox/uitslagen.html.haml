@@ -1,132 +1,154 @@
-%h1
-  Sandbox#index
-%p
-  Hallo allemaal
-  = @re
-
-%h2
-  Hier staat uitgelegd hoe de sandbox werkt
-  
-%p
-  Je hebt al bundle install en rails server gedaan, dat is prima.
-
-%p
-  Om een pagina te layouten maak je een bestand aan in de map "/app/views/sandbox" met de naam van de pagina die je wilt gaan layouten en de extensie ".html.haml".
-%p
-  Een voorbeeld van zo'n template is deze file "/app/views/sandbox/index.html.haml", meer informatie over haml is te vinden op: "http://haml.info/"
-
-%h2
-  Voorbeeldjes van bootstrap
-
-%h3
-  Tables
-%table{:class => 'table'}
-  %caption
-    Table{:class => 'table'}
-  %thead
-    %tr
-      %th Head1
-      %th Head2
-      %th Head3
-  %tbody
-    %tr
-      %td Row1
-      %td Row1
-      %td Row1
-    %tr
-      %td Row2
-      %td Row2
-      %td Row2
-	
-%table{:class => 'table table-striped'}
-  %caption
-    Table{:class => 'table table-striped'}
-  %thead
-    %tr
-      %th Head1
-      %th Head2
-      %th Head3
-  %tbody
-    %tr
-      %td Row1
-      %td Row1
-      %td Row1
-    %tr
-      %td Row2
-      %td Row2
-      %td Row2
-
-%table{:class => 'table table-bordered'}
-  %caption
-    Table{:class => 'table table-bordered'}
-  %thead
-    %tr
-      %th Head1
-      %th Head2
-      %th Head3
-  %tbody
-    %tr
-      %td Row1
-      %td Row1
-      %td Row1
-    %tr
-      %td Row2
-      %td Row2
-      %td Row2
-
-%table{:class => 'table table-hover'}
-  %caption
-    Table{:class => 'table table-hover'}
-  %thead
-    %tr
-      %th Head1
-      %th Head2
-      %th Head3
-  %tbody
-    %tr
-      %td Row1
-      %td Row1
-      %td Row1
-    %tr
-      %td Row2
-      %td Row2
-      %td Row2
-
-%table{:class => 'table table-condensed'}
-  %caption
-    Table{:class => 'table table-condensed'}
-  %thead
-    %tr
-      %th Head1
-      %th Head2
-      %th Head3
-  %tbody
-    %tr
-      %td Row1
-      %td Row1
-      %td Row1
-    %tr
-      %td Row2
-      %td Row2
-      %td Row2
-
-%h3
-  Forms
-%form
-  %fieldset
-    %legend
-      Legend
-    %label
-      Label name
-    %input{:type => "text", :placeholder => "Type something..."}
-    %span{:class => "help-block"}
-      Example block-level help text here.
-    %label{:class => "checkbox"}
-      %input{:type => "checkbox"}
-      Check me out
-    %button{:type => "submit", :class => "btn"}
-      Click me
-
-%h3
-  Icons
-%i{:class => "icon-search"}
+.row
+  .col-md-12
+    %h1 Uitslagen
+.row
+  .col-md-12
+    #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+      %h2 Januari
+      .panel.panel-primary
+        #headingOne.panel-heading{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "tab"}
+          .row
+            .col-xs-1
+              %h3.panel-title 18
+            .col-xs-11
+              %h3.panel-title
+                Abdijcross (NK cross)
+                %span.glyphicon.glyphicon-chevron-down.pull-right
+        #collapseOne.panel-collapse.collapse{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+          %table.table
+            %tr
+              %td{:colspan => "3"}
+                %h4 Cross 2.6K
+            %tr
+              %td= Faker::Name.name
+              %td 9:03
+              %td 17.24
+          .panel-footer.text-center
+            %a{:href => "#", :role => "button"} Evenementpagina
+      .panel.panel-primary
+        #headingTwo.panel-heading{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "tab"}
+          .row
+            .col-xs-1
+              %h3.panel-title 11
+            .col-xs-11
+              %h3.panel-title
+                Woolderesloop 1
+                %span.glyphicon.glyphicon-chevron-down.pull-right
+        #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
+          %table.table
+            %tr
+              %td{:colspan => "3"}
+                %h4 Weg 5.1K
+            %tr
+              %td= Faker::Name.name
+              %td 17:05
+              %td 17.91 km/h
+            %tr
+              %td{:colspan => "3"}
+                %h4 Weg 10K
+            %tr
+              %td= Faker::Name.name
+              %td 45.33
+              %td 13.17 km/h
+            %tr
+              %td= Faker::Name.name
+              %td 46:53
+              %td 12.8 km/h
+          .panel-footer.text-center
+            %a{:href => "#", :role => "button"} Evenementpagina
+      .panel.panel-primary
+        #headingThree.panel-heading{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree", :role => "tab"}
+          .row
+            .col-xs-1
+              %h3.panel-title 11
+            .col-xs-11
+              %h3.panel-title
+                Egmond Halve marahon
+                %span.glyphicon.glyphicon-chevron-down.pull-right
+        #collapseThree.panel-collapse.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
+          %table.table
+            %tr
+              %td{:colspan => "3"}
+                %h4 Weg 10.5K
+            %tr
+              %td= Faker::Name.name
+              %td 38:14
+              %td 16.48 hm/h
+            %tr
+              %td= Faker::Name.name
+              %td 40:27
+              %td 15.57 km/h
+            %tr
+              %td= Faker::Name.name
+              %td 48:39
+              %td 12.95 km/h
+            %tr
+              %td= Faker::Name.name
+              %td 54.51
+              %td 11.49 km/h
+            %tr
+              %td{:colspan => "3"}
+                %h4 Weg 21.0975K
+            %tr
+              %td= Faker::Name.name
+              %td 1:25:48
+              %td 14.75 hm/h
+            %tr
+              %td= Faker::Name.name
+              %td 1:28:11
+              %td 14.75 km/h
+            %tr
+              %td= Faker::Name.name
+              %td 2:08:59
+              %td 9.81 km/h
+          .panel-footer.text-center
+            %a{:href => "#", :role => "button"} Evenementpagina
+      %h2 December 2014
+      .panel.panel-primary
+        #heading3.panel-heading{"aria-controls" => "collapse3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse3", :role => "tab"}
+          .row
+            .col-xs-1
+              %h3.panel-title 31
+            .col-xs-11
+              %h3.panel-title
+                Egmond Halve marahon
+                %span.glyphicon.glyphicon-chevron-down.pull-right
+        #collapse3.panel-collapse.collapse{"aria-labelledby" => "heading3", :role => "tabpanel"}
+          %table.table
+            %tr
+              %td{:colspan => "3"}
+                %h4 Weg 10.5K
+            %tr
+              %td= Faker::Name.name
+              %td 38:14
+              %td 16.48 hm/h
+            %tr
+              %td= Faker::Name.name
+              %td 40:27
+              %td 15.57 km/h
+            %tr
+              %td= Faker::Name.name
+              %td 48:39
+              %td 12.95 km/h
+            %tr
+              %td= Faker::Name.name
+              %td 54.51
+              %td 11.49 km/h
+            %tr
+              %td{:colspan => "3"}
+                %h4 Weg 21.0975K
+            %tr
+              %td= Faker::Name.name
+              %td 1:25:48
+              %td 14.75 hm/h
+            %tr
+              %td= Faker::Name.name
+              %td 1:28:11
+              %td 14.75 km/h
+            %tr
+              %td= Faker::Name.name
+              %td 2:08:59
+              %td 9.81 km/h
+          .panel-footer.text-center
+            %a{:href => "#", :role => "button"} Evenementpagina
+    #results
