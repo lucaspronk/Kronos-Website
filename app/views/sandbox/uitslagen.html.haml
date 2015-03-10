@@ -1,154 +1,113 @@
 .row
   .col-md-12
-    %h1 Uitslagen
+    %h1 
+      Uitslagen
+      %small overzicht
 .row
   .col-md-12
-    #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
-      %h2 Januari
-      .panel.panel-primary
-        #headingOne.panel-heading{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "tab"}
-          .row
-            .col-xs-1
-              %h3.panel-title 18
-            .col-xs-11
-              %h3.panel-title
-                Abdijcross (NK cross)
-                %span.glyphicon.glyphicon-chevron-down.pull-right
-        #collapseOne.panel-collapse.collapse{"aria-labelledby" => "headingOne", :role => "tabpanel"}
-          %table.table
-            %tr
-              %td{:colspan => "3"}
-                %h4 Cross 2.6K
-            %tr
-              %td= Faker::Name.name
-              %td 9:03
-              %td 17.24
-          .panel-footer.text-center
-            %a{:href => "#", :role => "button"} Evenementpagina
-      .panel.panel-primary
-        #headingTwo.panel-heading{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "tab"}
-          .row
-            .col-xs-1
-              %h3.panel-title 11
-            .col-xs-11
-              %h3.panel-title
-                Woolderesloop 1
-                %span.glyphicon.glyphicon-chevron-down.pull-right
-        #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
-          %table.table
-            %tr
-              %td{:colspan => "3"}
-                %h4 Weg 5.1K
-            %tr
-              %td= Faker::Name.name
-              %td 17:05
-              %td 17.91 km/h
-            %tr
-              %td{:colspan => "3"}
-                %h4 Weg 10K
-            %tr
-              %td= Faker::Name.name
-              %td 45.33
-              %td 13.17 km/h
-            %tr
-              %td= Faker::Name.name
-              %td 46:53
-              %td 12.8 km/h
-          .panel-footer.text-center
-            %a{:href => "#", :role => "button"} Evenementpagina
-      .panel.panel-primary
-        #headingThree.panel-heading{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree", :role => "tab"}
-          .row
-            .col-xs-1
-              %h3.panel-title 11
-            .col-xs-11
-              %h3.panel-title
-                Egmond Halve marahon
-                %span.glyphicon.glyphicon-chevron-down.pull-right
-        #collapseThree.panel-collapse.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
-          %table.table
-            %tr
-              %td{:colspan => "3"}
-                %h4 Weg 10.5K
-            %tr
-              %td= Faker::Name.name
-              %td 38:14
-              %td 16.48 hm/h
-            %tr
-              %td= Faker::Name.name
-              %td 40:27
-              %td 15.57 km/h
-            %tr
-              %td= Faker::Name.name
-              %td 48:39
-              %td 12.95 km/h
-            %tr
-              %td= Faker::Name.name
-              %td 54.51
-              %td 11.49 km/h
-            %tr
-              %td{:colspan => "3"}
-                %h4 Weg 21.0975K
-            %tr
-              %td= Faker::Name.name
-              %td 1:25:48
-              %td 14.75 hm/h
-            %tr
-              %td= Faker::Name.name
-              %td 1:28:11
-              %td 14.75 km/h
-            %tr
-              %td= Faker::Name.name
-              %td 2:08:59
-              %td 9.81 km/h
-          .panel-footer.text-center
-            %a{:href => "#", :role => "button"} Evenementpagina
-      %h2 December 2014
-      .panel.panel-primary
-        #heading3.panel-heading{"aria-controls" => "collapse3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse3", :role => "tab"}
-          .row
-            .col-xs-1
-              %h3.panel-title 31
-            .col-xs-11
-              %h3.panel-title
-                Egmond Halve marahon
-                %span.glyphicon.glyphicon-chevron-down.pull-right
-        #collapse3.panel-collapse.collapse{"aria-labelledby" => "heading3", :role => "tabpanel"}
-          %table.table
-            %tr
-              %td{:colspan => "3"}
-                %h4 Weg 10.5K
-            %tr
-              %td= Faker::Name.name
-              %td 38:14
-              %td 16.48 hm/h
-            %tr
-              %td= Faker::Name.name
-              %td 40:27
-              %td 15.57 km/h
-            %tr
-              %td= Faker::Name.name
-              %td 48:39
-              %td 12.95 km/h
-            %tr
-              %td= Faker::Name.name
-              %td 54.51
-              %td 11.49 km/h
-            %tr
-              %td{:colspan => "3"}
-                %h4 Weg 21.0975K
-            %tr
-              %td= Faker::Name.name
-              %td 1:25:48
-              %td 14.75 hm/h
-            %tr
-              %td= Faker::Name.name
-              %td 1:28:11
-              %td 14.75 km/h
-            %tr
-              %td= Faker::Name.name
-              %td 2:08:59
-              %td 9.81 km/h
-          .panel-footer.text-center
-            %a{:href => "#", :role => "button"} Evenementpagina
-    #results
+    %ul.nav.nav-tabs
+      %li.active{:role => 'presentation'}= link_to 'laatste','#'
+      %li{:role => 'presentation'}= link_to 'januari','#'
+      %li{:role => 'presentation'}= link_to 'december 2014','#'
+      %li{:role => 'presentation'}= link_to 'november 2014','#'
+      %li.dropdown{:role => "presentation"}
+        %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"} 
+          eerder
+          %span.caret
+        %ul.dropdown-menu{:role => "menu"}
+          %li= link_to 'october 2014','#'
+          %li= link_to 'september 2014','#'
+      %li.dropdown{:role => "presentation"}
+        %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"} 
+          jaar
+          %span.caret
+        %ul.dropdown-menu{:role => "menu"}
+          %li= link_to '2015','#'
+          %li= link_to '2014','#'
+          %li= link_to '2013','#'
+          %li= link_to '2012','#'
+
+.row
+  .col-md-12
+    %h2 Laatste wedstrijden
+    #laatste.panel-group.list-group
+      - (10).times do |ntime|
+        .panel.list-group-item
+          .list-group-heading
+            %a{:class=>'accordion-toggle collapsed',  "data-parent" => "#laatste", "data-toggle" => "collapse", :href => "#laatste-collapse-"+ntime.to_s}
+              .row
+                .col-xs-1
+                  %h4
+                    = Faker::Date.forward(23).strftime('%d') 
+                    = content_tag(:small, Faker::Date.forward(23).strftime('%a'))
+                .col-xs-10
+                  %h4
+                    = Faker::Lorem.sentence 
+                    = content_tag :small, ((Faker::Lorem.word) + " activiteit")
+                .col-xs-1.text-right
+                  %h4
+                    %small
+                      .icon
+          .collapse{:id=>'laatste-collapse-'+ntime.to_s}
+            .panel-body
+              -(1+rand(5)).times do |rslt|
+                .table-responsive
+                  %table.table.table-condensed.table-striped
+                    %thead
+                      %tr
+                        %th{:colspan=>'3'}
+                          = Faker::Lorem.word
+                    %tbody
+                      - (1+rand(7)).times do |n_uit|
+                        %tr
+                          %th.row.col-xs-1
+                            =(n_uit+1+rand(5)).to_s
+                          %td.col-xs-5
+                            = Faker::Name.name 
+                          %td.col-xs-6
+                            tijd
+            .row
+              .col-xs-12.text-center
+                = link_to 'evenementenpagina','/agendaitem#uitslagen', :class=>'btn btn-primary'
+
+.row
+  .col-md-12
+    %h2 Top tien per onderdeel
+    #toptien.panel-group.list-group
+      - (10).times do |ntime|
+        .panel.list-group-item
+          .list-group-heading
+            %a{:class=>'accordion-toggle collapsed',  "data-parent" => "#toptien", "data-toggle" => "collapse", :href => "#toptien-collapse-"+ntime.to_s}
+              .row
+                .col-xs-11
+                  %h4
+                    = Faker::Lorem.sentence 
+                .col-xs-1.text-right
+                  %h4
+                    %small
+                      .icon
+          .collapse{:id=>'toptien-collapse-'+ntime.to_s}
+            .panel-body
+              .table-responsive
+                %table.table.table-condensed.table-striped
+                  %thead
+                    %tr
+                      %th #
+                      %th Naam
+                      %th Eenheid
+                      %th Datum
+                      %th Wedstrijd
+                  %tbody
+                    - 10.times do |n_uit|
+                      %tr
+                        %th.row.col-xs-1
+                          =(1+n_uit).to_s
+                        %td.col-xs-3
+                          = Faker::Name.name 
+                        %td.col-xs-2
+                          hoeveelheid
+                        %td.col-xs-2
+                          datum
+                        %td.col-xs-5
+                          = link_to Faker::Lorem.word,'/agendaitem'
+

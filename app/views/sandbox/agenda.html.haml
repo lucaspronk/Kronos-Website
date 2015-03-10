@@ -18,8 +18,8 @@
           eerder
           %span.caret
         %ul.dropdown-menu{:role => "menu"}
-          %li= link_to 'januari','okt'
-      %li{:role => 'presentation'}= link_to 'februari','#'
+          %li= link_to 'januari','#'
+          %li= link_to 'februari','#'
       %li{:role => 'presentation'}= link_to 'maart','#'
       %li.active{:role => 'presentation'}= link_to 'april','#'
       %li{:role => 'presentation'}= link_to 'mei','#'
@@ -36,19 +36,29 @@
           %li= link_to 'december','#'
 .row 
   &nbsp;
-%table.table.table-hover
-  %tbody
-    - 15.times do |ntime|
-      %tr
-        %td.col-xs-1
-          %h4
-            = Faker::Date.forward(23).strftime('%d') 
-            =content_tag(:small, Faker::Date.forward(23).strftime('%a'))
-        %td.col-xs-1
-          %h4 
-            %small= Faker::Time.backward(14).strftime('%H:%M')
-        %td.col-xs-10
-          %h4
-            %a{:href => "#"}
-              = Faker::Lorem.sentence 
-              = content_tag :small, (Faker::Lorem.word << " activiteit")
+
+.row 
+  .col-md-12
+    .list-group.panel-group
+      - (5+rand(10)).times do |ntime|
+        .panel.list-group-item
+          .list-group-item-heading
+            %a{:href=>'/agendaitem'}
+              .row 
+                .col-xs-1
+                  %h4
+                    = Faker::Date.forward(23).strftime('%d') 
+                    = content_tag(:small, Faker::Date.forward(23).strftime('%a'))
+                .col-xs-1 
+                  %h4 
+                    %small= Faker::Time.backward(14).strftime('%H:%M')
+                .col-xs-9
+                  %h4
+                    = Faker::Lorem.sentence 
+                    = content_tag :small, ((Faker::Lorem.word) + " activiteit")
+                .col-xs-1.text-right
+                  - if (rand(101) > 60)
+                    %h4 
+                      %small
+                        %span.glyphicon.glyphicon-user
+                        = rand (20) + 1

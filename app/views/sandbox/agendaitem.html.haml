@@ -1,5 +1,5 @@
 .row
-  .col-md12
+  .col-md-12
     %h1
       =Faker::Lorem.sentence 
       %small 
@@ -49,98 +49,25 @@
       .panel-body Je moet inloggen om inschrijvingen te zien of aan te vullen.
 .row
   .col-md-12
-    %h2 Uitslagen
+    %h2{:id=>'uitslagen'} 
+      Uitslagen
 .row
   .col-md-12
-    %h3 Top 3 per onderdeel
-.row
-  .col-sm-6.col-md-4
-    .panel.panel-default
-      .panel-body
-        %h4
-          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} Verspringen
+    -(1+rand(5)).times do |rslt|
       %table.table
-        %tr
-          %td 1
-          %td= Faker::Name.name
-          %td 10:15
-        %tr
-          %td 2
-          %td= Faker::Name.name
-          %td 11:30
-        %tr
-          %td 3
-          %td= Faker::Name.name
-          %td 12:00
-  .col-sm-6.col-md-4
-    .panel.panel-default
-      .panel-body
-        %h4
-          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} Kogelstoten
-      %table.table
-        %tr
-          %td 1
-          %td= Faker::Name.name
-          %td 10:15
-        %tr
-          %td 2
-          %td= Faker::Name.name
-          %td 11:30
-        %tr
-          %td 3
-          %td= Faker::Name.name
-          %td 12:00
-  .col-sm-6.col-md-4
-    .panel.panel-default
-      .panel-body
-        %h4
-          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} 100 meter
-      %table.table
-        %tr
-          %td 1
-          %td= Faker::Name.name
-          %td 10:15
-        %tr
-          %td 2
-          %td= Faker::Name.name
-          %td 11:30
-        %tr
-          %td 3
-          %td= Faker::Name.name
-          %td 12:00
-  .col-sm-6.col-md-4
-    .panel.panel-default
-      .panel-body
-        %h4
-          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} 1500 meter
-      %table.table
-        %tr
-          %td 1
-          %td= Faker::Name.name
-          %td 10:15
-        %tr
-          %td 2
-          %td= Faker::Name.name
-          %td 11:30
-        %tr
-          %td 3
-          %td= Faker::Name.name
-          %td 12:00
-  .col-sm-6.col-md-4
-    .panel.panel-default
-      .panel-body
-        %h4
-          %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} 8k Cross
-      %table.table
-        %tr
-          %td 1
-          %td= Faker::Name.name
-          %td 10:15
-        %tr
-          %td 2
-          %td= Faker::Name.name
-          %td 11:30
-        %tr
-          %td 3
-          %td= Faker::Name.name
-          %td 12:00
+        %thead
+          %tr
+            %th{:colspan=>'4'}
+              = Faker::Lorem.word
+        %tbody
+          - (1+rand(7)).times do |n_uit|
+            %tr
+              %th.row.col-xs-1
+                =(n_uit+1+rand(5)).to_s
+              %td.col-xs-5
+                = Faker::Name.name 
+              %td.col-xs-3
+                tijd
+              %td.col-xs-3
+                snel
+ 
