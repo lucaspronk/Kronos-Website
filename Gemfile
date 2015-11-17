@@ -35,16 +35,16 @@ gem 'bootstrap-datepicker-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'less-rails'
+#  gem 'less-rails'
   gem 'sass-rails', '>= 3.2'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.2.7'
 
-  if RUBY_PLATFORM =~ /mingw/
-    gem 'therubyracer', '0.11.0beta1', :platform  => [:mswin, :mingw]
-  else
-    gem 'therubyracer', :platform  => [:ruby]
-  end
+#  if RUBY_PLATFORM =~ /mingw/
+#    gem 'therubyracer', '0.11.0beta1', :platform  => [:mswin, :mingw]
+#  else
+#    gem 'therubyracer', :platform  => [:ruby]
+#  end
 end
 
 group :production do
