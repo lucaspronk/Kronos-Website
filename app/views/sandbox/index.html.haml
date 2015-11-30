@@ -20,13 +20,13 @@
     .panel.panel-primary
       .panel-heading Agenda
       .list-group
-        - 10.times do |ntime|
+        - 7.times do |ntime|
           -# TODO: add date and add limit to sentence sise
           %a{:href=>'/agendaitem', :class=>'list-group-item'} 
             .row
               .col-xs-2
                 %h5
-                  = Faker::Date.forward(23).strftime('%d') 
+                  = Faker::Date.forward(23).strftime('%d')
                   = content_tag 'small', Faker::Date.forward(23).strftime('%b')
               .col-xs-8
                 %h5
@@ -39,3 +39,33 @@
                         %small
                           %span.glyphicon.glyphicon-user
                           = rand (20) + 1
+  .col-md-4
+    %form{:action => "poll/id/vote", :method => "POST"}
+      .panel.panel-primary
+        .panel-heading Pollepoll
+        .panel-body
+          %h5= Faker::Lorem.sentence + "?"
+        .list-group
+          - Faker::Number.between(2, 4).times do |ntime|
+            - prct = Faker::Number.between(0, 100)
+            .list-group-item
+              %input.form-control{:type => "radio", :name => "pollepoll_radio"}
+              .row
+                .col-xs-4
+                  .progress
+                    .progress-bar{:role => "progressbar", :style => "width: #{prct}%;"}
+                      =prct.to_s + "%"
+                  - Faker::Number.between(0, 10).times do |votes_n|
+                    = image_tag(Faker::Avatar.image("", "10x10"), class: "img-responsive img-thumbnail")
+                .col-xs-8
+                  = Faker::Lorem.sentence
+        .panel-footer
+          .input-group
+            %span.input-group-addon
+              %label
+                %input{:type => "checkbox"}
+                Anonymous
+            %button.btn.btn-success{:type => "submit"}
+              %span.glyphicon.glyphicon-pencil
+              Vote
+
