@@ -1,0 +1,12 @@
+// All this needs to be moved to an appropriate place
+
+section { min-height:400px; } // TODO: remove after dev, is only to show scroll menu
+
+.nav-stacked {
+  background:#FFF;
+}
+
+.affix {
+  top:14px; // "affix data-offset-top" - "hoogte header" = 14px so the transition to fixed is smooth
+  width:360px; // FIXME: make this responsive using JavaScript (so it fills it's original column width)
+}

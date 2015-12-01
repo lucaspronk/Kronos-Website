@@ -1,0 +1,24 @@
+<body data-spy="scroll" data-target="#side-nav" data-offset="100">
+
+.row
+  .col-md-8
+    %section#trainingen
+      %h2 Trainingen
+    %section#trainingstijden
+      %h2 Trainingstijden
+    %section#trainingslocatie
+      %h2 Trainingslocatie
+    %section#batatrainingen
+      %h2 Batatrainingen
+
+  .col-md-4
+    %nav#side-nav
+      %ul.nav.nav-pills.nav-stacked{'data-spy' => 'affix', 'data-offset-top' => '215'}
+        %li{'role' => 'presentation'}
+          %a{:href => "#trainingen"}  Trainingen
+        %li{'role' => 'presentation'}
+          %a{:href => "#trainingstijden"} Trainingstijden
+        %li{'role' => 'presentation'}
+          %a{:href => "#trainingslocatie"} Trainingslocatie
+        %li{'role' => 'presentation'}
+          %a{:href => "#batatrainingen"} Batatrainingen

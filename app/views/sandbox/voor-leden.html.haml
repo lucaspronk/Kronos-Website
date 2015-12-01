@@ -1,0 +1,24 @@
+<body data-spy="scroll" data-target="#side-nav" data-offset="100">
+
+.row
+  .col-md-8
+    %section#voor-leden
+      %h2 Voor leden
+    %section#commissies
+      %h2 Comissies
+    %section#laphap
+      %h2 Laphap
+    %section#kledinglijn
+      %h2 Kledinglijn
+
+  .col-md-4
+    %nav#side-nav
+      %ul.nav.nav-pills.nav-stacked{'data-spy' => 'affix', 'data-offset-top' => '215'}
+        %li{'role' => 'presentation'}
+          %a{:href => "#voor-leden"}  Voor leden
+        %li{'role' => 'presentation'}
+          %a{:href => "#commissies"}  Commissies
+        %li{'role' => 'presentation'}
+          %a{:href => "#laphap"}  Laphap
+        %li{'role' => 'presentation'}
+          %a{:href => "#kledinglijn"}  Kledinglijn

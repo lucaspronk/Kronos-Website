@@ -1,0 +1,24 @@
+<body data-spy="scroll" data-target="#side-nav" data-offset="100">
+
+.row
+  .col-md-8
+    %section#over-kronos
+      %h2 Over Kronos
+    %section#bestuur
+      %h2 Bestuur
+    %section#activiteiten
+      %h2 Activiteiten
+    %section#lid-worden
+      %h2 Lid worden
+
+  .col-md-4
+    %nav#side-nav
+      %ul.nav.nav-pills.nav-stacked{'data-spy' => 'affix', 'data-offset-top' => '215'}
+        %li{'role' => 'presentation'}
+          %a{:href => "#over-kronos"} Over Kronos
+        %li{'role' => 'presentation'}
+          %a{:href => "#bestuur"} Bestuur
+        %li{'role' => 'presentation'}
+          %a{:href => "#activiteiten"} Activiteiten
+        %li{'role' => 'presentation'}
+          %a{:href => "#lid-worden"} Lid worden
