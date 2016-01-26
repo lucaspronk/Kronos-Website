@@ -9,4 +9,8 @@ section { min-height:400px; } // TODO: remove after dev, is only to show scroll 
 .affix {
   top:14px; // "affix data-offset-top" - "hoogte header" = 14px so the transition to fixed is smooth
   width:360px; // FIXME: make this responsive using JavaScript (so it fills it's original column width)
+
+  @media (max-width: 768px) {
+    position:relative;
+  }
 }

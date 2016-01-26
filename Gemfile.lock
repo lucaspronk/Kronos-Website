@@ -460,3 +460,6 @@ DEPENDENCIES
   unicorn (~> 4.6.3)
   wicked_pdf (~> 0.9.7)
   will_paginate (~> 3.0.3)
+
+BUNDLED WITH
+   1.11.2
