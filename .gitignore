@@ -1,6 +1,7 @@
 .bundle
 .buildpath
 .project
+.vagrant
 .idea
 db/*.sqlite3
 .rvmrc
